@@ -1,25 +1,11 @@
+<a href="https://www.youtube.com/playlist?list=PLKGarocXCE1G6CQOoiYdMVx-E1d9F_itF" target="_blank">
+<p align="center">
+<img src="https://kaupenjoe.net/files/General/Minecraft/Modding/Tutorials/neo-tutorial-image-1.jpg" alt="Logo" width="1000"/> 
+</p></a>
 
-Installation information
-=======
+# NeoForge Modding Tutorials For Minecraft 1.21.X 
+This is the GitHub Repository for Kaupenjoe's NeoForge Modding Tutorials For Minecraft 1.21.X
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+The Individual Tutorials are seperated into Branches for ease of access. 
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Watch the Tutorials here: <a href="https://www.youtube.com/playlist?list=PLKGarocXCE1G6CQOoiYdMVx-E1d9F_itF" target="_blank">YouTube Playlist</a>
