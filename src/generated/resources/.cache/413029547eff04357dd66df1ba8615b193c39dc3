@@ -1,0 +1,13 @@
+// 1.21.1	2024-09-06T13:12:38.0212375	Block States: tutorialmod
+fc4b73d7d5429cd1c496b45459a243216fd5ce35 assets/tutorialmod/blockstates/bismuth_block.json
+b4895c3f5396f7c4c029762f48f46f1369cf5748 assets/tutorialmod/blockstates/bismuth_deepslate_ore.json
+5c5fb54602aefaf0763297e9955f6c3f83550500 assets/tutorialmod/blockstates/bismuth_ore.json
+2d316979b5247b802b0590d94b40bac75fde6974 assets/tutorialmod/blockstates/magic_block.json
+0097fc802455bf29f1de139c677fb7693e30bd10 assets/tutorialmod/models/block/bismuth_block.json
+d96dec7d818c942bf3ca88ca9e4407c92a49bcd6 assets/tutorialmod/models/block/bismuth_deepslate_ore.json
+7f7087fc39bf90d64fbc659e606ced3f8b7b39ad assets/tutorialmod/models/block/bismuth_ore.json
+ed27aaa00c275028e1495bb6d6bfdcea1851067b assets/tutorialmod/models/block/magic_block.json
+a118ac7349d7896719a282e634bc3604295f34bd assets/tutorialmod/models/item/bismuth_block.json
+41ec25eced74c31f69d29965c8aef70bd0501eef assets/tutorialmod/models/item/bismuth_deepslate_ore.json
+169aaa0948365ba21f18244d0d130af75c705dfb assets/tutorialmod/models/item/bismuth_ore.json
+db3c7fd404543728f8b989bee0ca68018dac6e79 assets/tutorialmod/models/item/magic_block.json
