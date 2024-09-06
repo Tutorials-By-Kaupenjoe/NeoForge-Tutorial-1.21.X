@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tutorialmod:block/bismuth_slab"
+    },
+    "type=double": {
+      "model": "tutorialmod:block/bismuth_block"
+    },
+    "type=top": {
+      "model": "tutorialmod:block/bismuth_slab_top"
+    }
+  }
+}

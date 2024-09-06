@@ -14,6 +14,19 @@
 
   "block.tutorialmod.magic_block": "Magic Block",
 
+  "block.tutorialmod.bismuth_stairs": "Bismuth Stairs",
+  "block.tutorialmod.bismuth_slab": "Bismuth Slab",
+
+  "block.tutorialmod.bismuth_button": "Bismuth Button",
+  "block.tutorialmod.bismuth_pressure_plate": "Bismuth Pressure Plate",
+
+  "block.tutorialmod.bismuth_fence": "Bismuth Fence",
+  "block.tutorialmod.bismuth_fence_gate": "Bismuth Fence Gate",
+  "block.tutorialmod.bismuth_wall": "Bismuth Wall",
+
+  "block.tutorialmod.bismuth_door": "Bismuth Door",
+  "block.tutorialmod.bismuth_trapdoor": "Bismuth Trapdoor",
+
 
   "creativetab.tutorialmod.bismuth_items": "Bismuth Items",
   "creativetab.tutorialmod.bismuth_blocks": "Bismuth Blocks",
