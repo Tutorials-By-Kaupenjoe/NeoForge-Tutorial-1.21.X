@@ -1,8 +1,13 @@
-// 1.21.1	2024-09-06T14:02:57.7126545	Item Models: tutorialmod
+// 1.21.1	2024-09-07T14:26:23.9592065	Item Models: tutorialmod
 85c4092ee8a88b79898e775ffd1ddd7a535d2b66 assets/tutorialmod/models/item/bismuth.json
+02b77817941627a9a89f06fa5972e0a4ddb84b4c assets/tutorialmod/models/item/bismuth_axe.json
 e41a4177e33cb9e507707b7b881a50cc301a4d18 assets/tutorialmod/models/item/bismuth_button.json
 0bacf199ccdefcceab1c492f3dcbc2b869e410b8 assets/tutorialmod/models/item/bismuth_door.json
 7d04bc70382d24e9f33b33d90fcb98aaac4760dd assets/tutorialmod/models/item/bismuth_fence.json
+f57f83e8e1a08f41ed211c885d17979106a5833a assets/tutorialmod/models/item/bismuth_hoe.json
+05ce0dfbff272ed84824e535951f792d6e7968b1 assets/tutorialmod/models/item/bismuth_pickaxe.json
+a54afda44eb7250175edad834ef386f45087b341 assets/tutorialmod/models/item/bismuth_shovel.json
+0736b6b1901b96547aff24d557c219e802b62af8 assets/tutorialmod/models/item/bismuth_sword.json
 20c78441900d9ffcf8433b9984c44e3c7ac2a274 assets/tutorialmod/models/item/bismuth_wall.json
 69a45d9eda7fcbbb46f3a4bf568243a7b2141123 assets/tutorialmod/models/item/chisel.json
 91ec90598690688b7129cd5976415ae5158e72d3 assets/tutorialmod/models/item/frostfire_ice.json
