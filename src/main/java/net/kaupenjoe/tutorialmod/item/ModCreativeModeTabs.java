@@ -34,6 +34,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BISMUTH_SHOVEL);
                         output.accept(ModItems.BISMUTH_AXE);
                         output.accept(ModItems.BISMUTH_HOE);
+
+                        output.accept(ModItems.BISMUTH_HAMMER);
                     }).build());
 
     public static final Supplier<CreativeModeTab> BISMUTH_BLOCK_TAB = CREATIVE_MODE_TAB.register("bismuth_blocks_tab",

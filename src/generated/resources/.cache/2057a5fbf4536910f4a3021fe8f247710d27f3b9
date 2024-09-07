@@ -1,9 +1,10 @@
-// 1.21.1	2024-09-07T14:26:23.9592065	Item Models: tutorialmod
+// 1.21.1	2024-09-07T15:44:11.5321549	Item Models: tutorialmod
 85c4092ee8a88b79898e775ffd1ddd7a535d2b66 assets/tutorialmod/models/item/bismuth.json
 02b77817941627a9a89f06fa5972e0a4ddb84b4c assets/tutorialmod/models/item/bismuth_axe.json
 e41a4177e33cb9e507707b7b881a50cc301a4d18 assets/tutorialmod/models/item/bismuth_button.json
 0bacf199ccdefcceab1c492f3dcbc2b869e410b8 assets/tutorialmod/models/item/bismuth_door.json
 7d04bc70382d24e9f33b33d90fcb98aaac4760dd assets/tutorialmod/models/item/bismuth_fence.json
+db744be1ffa494c404516dc526403fc9e98a85b4 assets/tutorialmod/models/item/bismuth_hammer.json
 f57f83e8e1a08f41ed211c885d17979106a5833a assets/tutorialmod/models/item/bismuth_hoe.json
 05ce0dfbff272ed84824e535951f792d6e7968b1 assets/tutorialmod/models/item/bismuth_pickaxe.json
 a54afda44eb7250175edad834ef386f45087b341 assets/tutorialmod/models/item/bismuth_shovel.json
