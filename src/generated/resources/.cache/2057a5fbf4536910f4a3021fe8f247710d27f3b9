@@ -1,4 +1,4 @@
-// 1.21.1	2024-10-05T19:48:33.5033113	Item Models: tutorialmod
+// 1.21.1	2024-10-06T19:43:34.3560349	Item Models: tutorialmod
 85c4092ee8a88b79898e775ffd1ddd7a535d2b66 assets/tutorialmod/models/item/bismuth.json
 02b77817941627a9a89f06fa5972e0a4ddb84b4c assets/tutorialmod/models/item/bismuth_axe.json
 094d2dd74f2e4bf3e14cff0e29d1068c47a06cdb assets/tutorialmod/models/item/bismuth_boots.json
@@ -57,6 +57,7 @@ a54afda44eb7250175edad834ef386f45087b341 assets/tutorialmod/models/item/bismuth_
 20c78441900d9ffcf8433b9984c44e3c7ac2a274 assets/tutorialmod/models/item/bismuth_wall.json
 69a45d9eda7fcbbb46f3a4bf568243a7b2141123 assets/tutorialmod/models/item/chisel.json
 91ec90598690688b7129cd5976415ae5158e72d3 assets/tutorialmod/models/item/frostfire_ice.json
+449182fb0ac0479cfb756ef062a8c183fc5a3c2a assets/tutorialmod/models/item/kaupen_armor_trim_smithing_template.json
 f4c84ba8717deb3f252eef0b2e0833f60e735029 assets/tutorialmod/models/item/radish.json
 4632490c178511af06a636377c35e6caf64df3f1 assets/tutorialmod/models/item/raw_bismuth.json
 fa9080666ba4e3910d0814ec35a3e300f861fb1c assets/tutorialmod/models/item/starlight_ashes.json

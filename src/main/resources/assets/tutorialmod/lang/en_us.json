@@ -21,6 +21,7 @@
   "item.tutorialmod.bismuth_boots": "Bismuth Boots",
 
   "item.tutorialmod.bismuth_horse_armor": "Bismuth Horse Armor",
+  "item.tutorialmod.kaupen_armor_trim_smithing_template": "Kaupen Trim Template",
 
   "block.tutorialmod.bismuth_block": "Block of Bismuth",
   "block.tutorialmod.bismuth_ore": "Bismuth Ore",
@@ -52,5 +53,8 @@
   "tooltip.tutorialmod.chisel.shift_down": "This Item can chisel Blocks into Bricks",
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more Information",
 
-  "tooltip.tutorialmod.radish.tooltip": "Tastes really great!"
+  "tooltip.tutorialmod.radish.tooltip": "Tastes really great!",
+
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Trim",
+  "trim_material.tutorialmod.bismuth": "Bismuth Material"
 }

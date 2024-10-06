@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.item.custom.FuelItem;
 import net.kaupenjoe.tutorialmod.item.custom.HammerItem;
 import net.kaupenjoe.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -74,6 +75,9 @@ public class ModItems {
     public static final DeferredItem<Item> BISMUTH_HORSE_ARMOR = ITEMS.register("bismuth_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.register("kaupen_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "kaupen")));
 
 
     public static void register(IEventBus eventBus) {
