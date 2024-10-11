@@ -59,6 +59,15 @@
 
   "effect.tutorialmod.slimey": "Slimey",
 
+  "painting.tutorialmod.world.title": "World",
+  "painting.tutorialmod.world.author": "NanoAttack",
+  "painting.tutorialmod.shrimp.title": "Shrimp",
+  "painting.tutorialmod.shrimp.author": "NanoAttack",
+  "painting.tutorialmod.saw_them.title": "Saw Them",
+  "painting.tutorialmod.saw_them.author": "NanoAttack",
+
+
+
   "tooltip.tutorialmod.magic_block.tooltip": "This Block is very §9MAGICAL§r",
 
   "tooltip.tutorialmod.chisel.shift_down": "This Item can chisel Blocks into Bricks",
