@@ -1,4 +1,4 @@
-// 1.21.1	2024-10-06T19:43:34.3560349	Tags for minecraft:item mod id tutorialmod
+// 1.21.3	2024-11-02T19:28:44.120801	Tags for minecraft:item mod id tutorialmod
 a672dfbd7b3f2222de3ffe0cd7beba69d14c59c0 data/minecraft/tags/item/axes.json
 69f08f273d31fad588319daa4daeb97f2230e6f7 data/minecraft/tags/item/hoes.json
 bdda3aa46c4f3100750768db7f12780220a5c250 data/minecraft/tags/item/pickaxes.json
@@ -7,4 +7,5 @@ faf99ce12272d5954548427105f8faf7c2998f1a data/minecraft/tags/item/swords.json
 29808b71d81eb4053fbd846676151f4e88fc2947 data/minecraft/tags/item/trimmable_armor.json
 72f9f73c0b358183ce62749ab330c88ef81b02f0 data/minecraft/tags/item/trim_materials.json
 3785ccf2250da2396658a0921bd6f81beb1f7be9 data/minecraft/tags/item/trim_templates.json
+72f9f73c0b358183ce62749ab330c88ef81b02f0 data/tutorialmod/tags/item/bismuth_repair.json
 ec4bf09a2f27e3af971596648aa61fd2be709db1 data/tutorialmod/tags/item/transformable_items.json

@@ -14,7 +14,7 @@ public class ModPotions {
             DeferredRegister.create(BuiltInRegistries.POTION, TutorialMod.MOD_ID);
 
     public static final Holder<Potion> SLIMEY_POTION = POTIONS.register("slimey_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT, 1200, 0)));
+            () -> new Potion("slimey_potion", new MobEffectInstance(ModEffects.SLIMEY_EFFECT, 1200, 0)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);

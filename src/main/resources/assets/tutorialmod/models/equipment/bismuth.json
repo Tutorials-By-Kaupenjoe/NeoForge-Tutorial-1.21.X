@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "tutorialmod:bismuth"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "tutorialmod:bismuth"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "tutorialmod:bismuth"
+      }
+    ]
+  }
+}

@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "bismuth",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "tutorialmod:bismuth"
-    }
+    "#": "minecraft:stick",
+    "W": "tutorialmod:bismuth"
   },
   "pattern": [
     "#W#",
