@@ -1,4 +1,4 @@
-// 1.21.1	2024-09-06T17:33:35.0863894	Block States: tutorialmod
+// 1.21.1	2024-11-18T21:41:02.6783381	Block States: tutorialmod
 fc4b73d7d5429cd1c496b45459a243216fd5ce35 assets/tutorialmod/blockstates/bismuth_block.json
 12833e7b89e5c0f2e9106085dcf9d9e11cf75b57 assets/tutorialmod/blockstates/bismuth_button.json
 b4895c3f5396f7c4c029762f48f46f1369cf5748 assets/tutorialmod/blockstates/bismuth_deepslate_ore.json
@@ -13,6 +13,7 @@ a5684b332541303f689be2ab2e93be8d036d413e assets/tutorialmod/blockstates/bismuth_
 9d8278772738444ac0eba6ec9893d81fca8e1d9a assets/tutorialmod/blockstates/bismuth_trapdoor.json
 4665b9ff850bc1d6542ed2f5aaedfb1a035a83c2 assets/tutorialmod/blockstates/bismuth_wall.json
 2d316979b5247b802b0590d94b40bac75fde6974 assets/tutorialmod/blockstates/magic_block.json
+369ff19f0ddd34b3501a422ca9ba6eee50c28c09 assets/tutorialmod/blockstates/radish_crop.json
 0097fc802455bf29f1de139c677fb7693e30bd10 assets/tutorialmod/models/block/bismuth_block.json
 b430d1d87061bca0196d877adbdf71173f9deaf4 assets/tutorialmod/models/block/bismuth_button.json
 57614ad44a43d12f36bdeec43b7b072f4d943f7f assets/tutorialmod/models/block/bismuth_button_pressed.json
@@ -48,6 +49,10 @@ bf629be687860a4a95a789e357fda47617961e8a assets/tutorialmod/models/block/bismuth
 78aa4dc97e2c8f0af42d1b0593c3634241e449ef assets/tutorialmod/models/block/bismuth_wall_side.json
 aaab7fc2523e163f34142343d458459ae7208fe9 assets/tutorialmod/models/block/bismuth_wall_side_tall.json
 ed27aaa00c275028e1495bb6d6bfdcea1851067b assets/tutorialmod/models/block/magic_block.json
+31185a07fc2dc6f1371a066ffe41a03981a51692 assets/tutorialmod/models/block/radish_crop_stage0.json
+130f25109def058713c7d74bf283b7c097ae5425 assets/tutorialmod/models/block/radish_crop_stage1.json
+0238d5cbef661310169a033429e97d1485072fe7 assets/tutorialmod/models/block/radish_crop_stage2.json
+7e4b2f1a22ca8f24a1760fa3ecefaa513861b41a assets/tutorialmod/models/block/radish_crop_stage3.json
 a118ac7349d7896719a282e634bc3604295f34bd assets/tutorialmod/models/item/bismuth_block.json
 41ec25eced74c31f69d29965c8aef70bd0501eef assets/tutorialmod/models/item/bismuth_deepslate_ore.json
 89a73a57845e0490c3904533720baeedf7e46a57 assets/tutorialmod/models/item/bismuth_fence_gate.json

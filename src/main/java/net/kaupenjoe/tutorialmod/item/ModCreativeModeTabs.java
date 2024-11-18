@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KAUPEN_BOW);
 
                         output.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
+                        output.accept(ModItems.RADISH_SEEDS);
 
                     }).build());
 
