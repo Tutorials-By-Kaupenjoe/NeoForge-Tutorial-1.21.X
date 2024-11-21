@@ -33,6 +33,7 @@
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
 
   "item.tutorialmod.radish_seeds": "Radish Seeds",
+  "item.tutorialmod.goji_berries": "Goji Berries",
 
 
   "block.tutorialmod.bismuth_block": "Block of Bismuth",
@@ -57,7 +58,7 @@
   "block.tutorialmod.bismuth_lamp": "Bismuth Lamp",
 
   "block.tutorialmod.radish_crop": "Radish Crop",
-
+  "block.tutorialmod.goji_berry_bush": "Goji Berry Bush",
 
   "creativetab.tutorialmod.bismuth_items": "Bismuth Items",
   "creativetab.tutorialmod.bismuth_blocks": "Bismuth Blocks",

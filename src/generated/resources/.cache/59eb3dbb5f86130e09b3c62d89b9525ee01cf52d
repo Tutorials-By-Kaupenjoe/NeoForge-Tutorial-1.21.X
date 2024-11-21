@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-18T21:41:02.6773369	Loot Tables
+// 1.21.1	2024-11-21T20:41:26.0825251	Loot Tables
 ea33c2a1e420da7916da2626364d946e161c2f6c data/tutorialmod/loot_table/blocks/bismuth_block.json
 63b39624969e53a57f98de95c0d38077aa71266c data/tutorialmod/loot_table/blocks/bismuth_button.json
 fd34a70d43389eb067a721582f8a89c3b58d29ab data/tutorialmod/loot_table/blocks/bismuth_deepslate_ore.json
@@ -12,4 +12,5 @@ edb6bac3a5e85ec91ead9c525ddd13c5bbe7a2cb data/tutorialmod/loot_table/blocks/bism
 bf986659c2331d19b05cf2597b400a5e0d4c73c3 data/tutorialmod/loot_table/blocks/bismuth_stairs.json
 5d7db77384b7e1a5ee2fe5c42e7aea41ff597ef5 data/tutorialmod/loot_table/blocks/bismuth_trapdoor.json
 af8e04bde28dac9e526252e8e8eb41e72357aa78 data/tutorialmod/loot_table/blocks/bismuth_wall.json
+8f5d307b68f65f6c0465ccc6f5ebdaf06af8f461 data/tutorialmod/loot_table/blocks/goji_berry_bush.json
 36b9bcd239fc7b8ab4aeafcbd04a4e2528293936 data/tutorialmod/loot_table/blocks/radish_crop.json
