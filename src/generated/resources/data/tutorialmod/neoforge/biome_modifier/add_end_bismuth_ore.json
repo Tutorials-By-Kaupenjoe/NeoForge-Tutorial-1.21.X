@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_end",
+  "features": "tutorialmod:end_bismuth_ore_placed",
+  "step": "underground_ores"
+}

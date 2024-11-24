@@ -55,6 +55,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCrop(((CropBlock) ModBlocks.RADISH_CROP.get()), "radish_crop_stage", "radish_crop_stage");
         makeBush(((SweetBerryBushBlock) ModBlocks.GOJI_BERRY_BUSH.get()), "goji_berry_bush_stage", "goji_berry_bush_stage");
+
+        blockWithItem(ModBlocks.BISMUTH_END_ORE);
+        blockWithItem(ModBlocks.BISMUTH_NETHER_ORE);
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
