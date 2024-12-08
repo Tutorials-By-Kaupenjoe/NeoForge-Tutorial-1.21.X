@@ -35,6 +35,8 @@
   "item.tutorialmod.radish_seeds": "Radish Seeds",
   "item.tutorialmod.goji_berries": "Goji Berries",
 
+  "item.tutorialmod.gecko_spawn_egg": "Gecko Spawn Egg",
+
 
   "block.tutorialmod.bismuth_block": "Block of Bismuth",
   "block.tutorialmod.bismuth_ore": "Bismuth Ore",
@@ -96,5 +98,7 @@
   "tooltip.tutorialmod.radish.tooltip": "Tastes really great!",
 
   "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Trim",
-  "trim_material.tutorialmod.bismuth": "Bismuth Material"
+  "trim_material.tutorialmod.bismuth": "Bismuth Material",
+
+  "entity.mccourse.gecko": "Gecko"
 }

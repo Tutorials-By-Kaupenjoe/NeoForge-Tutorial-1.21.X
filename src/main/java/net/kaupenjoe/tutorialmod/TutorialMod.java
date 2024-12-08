@@ -4,11 +4,14 @@ import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.component.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.enchantment.ModEnchantmentEffects;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
+import net.kaupenjoe.tutorialmod.entity.client.GeckoRenderer;
 import net.kaupenjoe.tutorialmod.item.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.util.ModItemProperties;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -56,6 +59,7 @@ public class TutorialMod {
         ModPotions.register(modEventBus);
 
         ModEnchantmentEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -92,6 +96,8 @@ public class TutorialMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             ModItemProperties.addCustomItemProperties();
+
+            EntityRenderers.register(ModEntities.GECKO.get(), GeckoRenderer::new);
         }
     }
 }
