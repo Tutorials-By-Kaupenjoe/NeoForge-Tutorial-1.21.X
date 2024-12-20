@@ -1,0 +1,121 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "tutorialmod:item/tomahawk",
+		"particle": "tutorialmod:item/tomahawk"
+	},
+	"elements": [
+		{
+			"name": "tip",
+			"from": [7.5, 11, 5],
+			"to": [8.5, 12, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11.5, 5.5]},
+			"faces": {
+				"north": {"uv": [4.5, 4, 5, 4.5], "texture": "#0"},
+				"east": {"uv": [4, 4, 4.5, 4.5], "texture": "#0"},
+				"south": {"uv": [5.5, 4, 6, 4.5], "texture": "#0"},
+				"west": {"uv": [5, 4, 5.5, 4.5], "texture": "#0"},
+				"up": {"uv": [5, 4, 4.5, 3.5], "texture": "#0"},
+				"down": {"uv": [5.5, 3.5, 5, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "blade",
+			"from": [7.5, 11, 3],
+			"to": [8.5, 16, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 13.5, 4]},
+			"faces": {
+				"north": {"uv": [3.5, 5, 4, 7.5], "texture": "#0"},
+				"east": {"uv": [5.5, 5, 6.5, 7.5], "texture": "#0"},
+				"south": {"uv": [6, 5, 6.5, 7.5], "texture": "#0"},
+				"west": {"uv": [4, 5, 5, 7.5], "texture": "#0"},
+				"up": {"uv": [5, 5, 4, 4.5], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [5.5, 4, 5, 5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cheeks",
+			"from": [8, 13, 5],
+			"to": [8, 16, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.00051, 14.5, 7.79289]},
+			"faces": {
+				"north": {"uv": [3, 2, 3, 3.5], "texture": "#0"},
+				"east": {"uv": [0.5, 2, 3, 3.5], "texture": "#0"},
+				"south": {"uv": [5.5, 2, 5.5, 3.5], "texture": "#0"},
+				"west": {"uv": [0.5, 2, 3, 3.5], "texture": "#0"},
+				"up": {"uv": [3, 2, 3, -0.5], "texture": "#0"},
+				"down": {"uv": [3, -0.5, 3, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "butt",
+			"from": [7.5, 12, 10],
+			"to": [8.5, 16, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 14, 10.5]},
+			"faces": {
+				"north": {"uv": [2, 5.5, 2.5, 7.5], "texture": "#0"},
+				"east": {"uv": [1.5, 5.5, 2, 7.5], "texture": "#0"},
+				"south": {"uv": [3, 5.5, 3.5, 7.5], "texture": "#0"},
+				"west": {"uv": [2.5, 5.5, 3, 7.5], "texture": "#0"},
+				"up": {"uv": [2.5, 5.5, 2, 5], "texture": "#0"},
+				"down": {"uv": [3, 5, 2.5, 5.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "handle",
+			"from": [10.4, 0, 0.5],
+			"to": [11.4, 18, 1.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [17.9, 9, 8]},
+			"faces": {
+				"north": {"uv": [9.5, 1, 10, 10], "texture": "#0"},
+				"east": {"uv": [9, 1, 9.5, 10], "texture": "#0"},
+				"south": {"uv": [10.5, 1, 11, 10], "texture": "#0"},
+				"west": {"uv": [10, 1, 10.5, 10], "texture": "#0"},
+				"up": {"uv": [10, 1, 9.5, 0.5], "texture": "#0"},
+				"down": {"uv": [10.5, 0.5, 10, 1], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 2.5, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 2.5, 1.5]
+		},
+		"firstperson_righthand": {
+			"translation": [1.25, 1.25, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [1.25, 1.25, 0]
+		},
+		"ground": {
+			"rotation": [90, 75, 0],
+			"translation": [0, -3, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"gui": {
+			"rotation": [69, -110, 85],
+			"translation": [0, -0.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"head": {
+			"rotation": [30, 180, 0],
+			"translation": [0, 2.25, -12]
+		},
+		"fixed": {
+			"rotation": [90, -65, 90],
+			"translation": [0, 0, 0.5],
+			"scale": [0.9, 0.9, 0.9]
+		}
+	},
+	"groups": [
+		{
+			"name": "tomahawk",
+			"origin": [0, 7.5, 0],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4]
+		}
+	]
+}

@@ -51,6 +51,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RADISH_SEEDS);
 
                         output.accept(ModItems.GOJI_BERRIES);
+                        output.accept(ModItems.TOMAHAWK);
 
                         output.accept(ModItems.GECKO_SPAWN_EGG);
 
