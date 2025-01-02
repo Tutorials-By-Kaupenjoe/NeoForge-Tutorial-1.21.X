@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "tutorialmod:item/radiation_staff_2d"
+  }
+}
