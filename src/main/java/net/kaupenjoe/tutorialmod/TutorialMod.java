@@ -5,6 +5,7 @@ import net.kaupenjoe.tutorialmod.component.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.enchantment.ModEnchantmentEffects;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
+import net.kaupenjoe.tutorialmod.entity.client.ChairRenderer;
 import net.kaupenjoe.tutorialmod.entity.client.GeckoRenderer;
 import net.kaupenjoe.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.kaupenjoe.tutorialmod.item.ModCreativeModeTabs;
@@ -100,6 +101,8 @@ public class TutorialMod {
 
             EntityRenderers.register(ModEntities.GECKO.get(), GeckoRenderer::new);
             EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+
+            EntityRenderers.register(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
         }
     }
 }
