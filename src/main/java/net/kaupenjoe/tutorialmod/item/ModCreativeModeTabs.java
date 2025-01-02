@@ -53,6 +53,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GOJI_BERRIES);
                         output.accept(ModItems.TOMAHAWK);
 
+                        output.accept(ModItems.RADIATION_STAFF);
+
                         output.accept(ModItems.GECKO_SPAWN_EGG);
 
                     }).build());
