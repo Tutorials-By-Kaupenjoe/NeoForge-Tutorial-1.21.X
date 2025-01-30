@@ -5,6 +5,8 @@ import net.kaupenjoe.tutorialmod.component.ModDataComponents;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -50,6 +52,14 @@ public class ChiselItem extends Item {
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null, context.getClickedPos(), ModSounds.CHISEL_USE.get(), SoundSource.BLOCKS);
+
+                ((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, clickedBlock.defaultBlockState()),
+                        context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.0,
+                        context.getClickedPos().getZ() + 0.5, 5, 0, 0, 0, 1);
+
+                ((ServerLevel) level).sendParticles(ParticleTypes.DOLPHIN,
+                        context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.5,
+                        context.getClickedPos().getZ() + 0.5, 5, 0, 0, 0, 3);
 
                 context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
             }
