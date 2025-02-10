@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "tutorialmod:berry_from_creeper",
+    "tutorialmod:radish_seeds_to_short_grass",
+    "tutorialmod:radish_seeds_to_tall_grass",
+    "tutorialmod:chisel_from_jungle_temple"
+  ],
+  "replace": false
+}

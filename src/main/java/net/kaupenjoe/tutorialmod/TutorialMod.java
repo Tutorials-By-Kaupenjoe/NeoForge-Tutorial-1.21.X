@@ -10,6 +10,7 @@ import net.kaupenjoe.tutorialmod.entity.client.GeckoRenderer;
 import net.kaupenjoe.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.kaupenjoe.tutorialmod.item.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.loot.ModLootModifiers;
 import net.kaupenjoe.tutorialmod.particle.BismuthParticles;
 import net.kaupenjoe.tutorialmod.particle.ModParticles;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
@@ -69,6 +70,8 @@ public class TutorialMod {
 
         ModVillagers.register(modEventBus);
         ModParticles.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

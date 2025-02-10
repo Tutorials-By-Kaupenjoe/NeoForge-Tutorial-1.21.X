@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-27T16:00:24.2426896	Loot Tables
+// 1.21.1	2025-02-10T16:33:41.540365	Loot Tables
 ea33c2a1e420da7916da2626364d946e161c2f6c data/tutorialmod/loot_table/blocks/bismuth_block.json
 63b39624969e53a57f98de95c0d38077aa71266c data/tutorialmod/loot_table/blocks/bismuth_button.json
 fd34a70d43389eb067a721582f8a89c3b58d29ab data/tutorialmod/loot_table/blocks/bismuth_deepslate_ore.json
@@ -19,6 +19,7 @@ af8e04bde28dac9e526252e8e8eb41e72357aa78 data/tutorialmod/loot_table/blocks/bism
 f6b893ccd90673b936db7684c63493fe47e3b7ef data/tutorialmod/loot_table/blocks/bloodwood_planks.json
 a09dda360357f8df5b81eb30c6623c64e484211d data/tutorialmod/loot_table/blocks/bloodwood_sapling.json
 bbf7c75cbc8b681248065c223f0849db279d57ef data/tutorialmod/loot_table/blocks/bloodwood_wood.json
+b1b90ee2a4a3ed439bf88673d91b911796a43ba5 data/tutorialmod/loot_table/blocks/chair.json
 8f5d307b68f65f6c0465ccc6f5ebdaf06af8f461 data/tutorialmod/loot_table/blocks/goji_berry_bush.json
 36b9bcd239fc7b8ab4aeafcbd04a4e2528293936 data/tutorialmod/loot_table/blocks/radish_crop.json
 1481019b709527c870fc227a77f886a0a7a60f43 data/tutorialmod/loot_table/blocks/stripped_bloodwood_log.json

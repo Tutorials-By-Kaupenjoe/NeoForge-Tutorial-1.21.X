@@ -1,0 +1,6 @@
+// 1.21.1	2025-02-10T16:33:41.5388596	Global Loot Modifiers : tutorialmod
+42e3a6871db45b5632dfe1e4ede489bd312fcd37 data/neoforge/loot_modifiers/global_loot_modifiers.json
+4b9d2885653a320f8b77e961f00002fef0d3d5af data/tutorialmod/loot_modifiers/berry_from_creeper.json
+c06e4331aba273288afce360b396ac4f5ed6ffe7 data/tutorialmod/loot_modifiers/chisel_from_jungle_temple.json
+3fba1cb75fe11b12b8b75110fcb8d0e689c1b01d data/tutorialmod/loot_modifiers/radish_seeds_to_short_grass.json
+75be732f1c6a4e23725191c1b534625b46029a80 data/tutorialmod/loot_modifiers/radish_seeds_to_tall_grass.json
