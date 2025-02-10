@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item.custom;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.component.ModDataComponents;
+import net.kaupenjoe.tutorialmod.particle.ModParticles;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -59,6 +60,10 @@ public class ChiselItem extends Item {
 
                 ((ServerLevel) level).sendParticles(ParticleTypes.DOLPHIN,
                         context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.5,
+                        context.getClickedPos().getZ() + 0.5, 5, 0, 0, 0, 3);
+
+                ((ServerLevel) level).sendParticles(ModParticles.BISMUTH_PARTICLES.get(),
+                        context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 1.0,
                         context.getClickedPos().getZ() + 0.5, 5, 0, 0, 0, 3);
 
                 context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
