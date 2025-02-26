@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.component.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.enchantment.ModEnchantmentEffects;
@@ -72,6 +73,7 @@ public class TutorialMod {
         ModParticles.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

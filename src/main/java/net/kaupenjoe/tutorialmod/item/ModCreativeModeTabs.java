@@ -96,6 +96,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOODWOOD_LEAVES.get());
 
                         output.accept(ModBlocks.CHAIR.get());
+                        output.accept(ModBlocks.PEDESTAL.get());
 
                     }).build());
 
