@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
+import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.tutorialmod.component.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.enchantment.ModEnchantmentEffects;
@@ -20,6 +21,7 @@ import net.kaupenjoe.tutorialmod.util.ModItemProperties;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import org.slf4j.Logger;
 
@@ -120,6 +122,11 @@ public class TutorialMod {
         @SubscribeEvent
         public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(ModParticles.BISMUTH_PARTICLES.get(), BismuthParticles.Provider::new);
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }
