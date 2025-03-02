@@ -16,6 +16,7 @@ import net.kaupenjoe.tutorialmod.loot.ModLootModifiers;
 import net.kaupenjoe.tutorialmod.particle.BismuthParticles;
 import net.kaupenjoe.tutorialmod.particle.ModParticles;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
+import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.screen.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.screen.custom.GrowthChamberScreen;
 import net.kaupenjoe.tutorialmod.screen.custom.PedestalScreen;
@@ -82,6 +83,7 @@ public class TutorialMod {
         ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
