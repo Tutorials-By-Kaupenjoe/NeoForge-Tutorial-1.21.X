@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-27T16:00:24.2456943	Block States: tutorialmod
+// 1.21.1	2025-03-02T13:32:59.6490414	Block States: tutorialmod
 fc4b73d7d5429cd1c496b45459a243216fd5ce35 assets/tutorialmod/blockstates/bismuth_block.json
 12833e7b89e5c0f2e9106085dcf9d9e11cf75b57 assets/tutorialmod/blockstates/bismuth_button.json
 b4895c3f5396f7c4c029762f48f46f1369cf5748 assets/tutorialmod/blockstates/bismuth_deepslate_ore.json
@@ -20,6 +20,7 @@ a5684b332541303f689be2ab2e93be8d036d413e assets/tutorialmod/blockstates/bismuth_
 1f0f76351cc18e6be9204d2660e009554301d69c assets/tutorialmod/blockstates/bloodwood_sapling.json
 fefe189b831db8137b11ec7a8afd27b743ec6d05 assets/tutorialmod/blockstates/bloodwood_wood.json
 678ad5927264542f395cb4bb78bfff6e9cf51c27 assets/tutorialmod/blockstates/goji_berry_bush.json
+4115fbde62c46de50c9bdd4c5185774b7caa3744 assets/tutorialmod/blockstates/growth_chamber.json
 2d316979b5247b802b0590d94b40bac75fde6974 assets/tutorialmod/blockstates/magic_block.json
 369ff19f0ddd34b3501a422ca9ba6eee50c28c09 assets/tutorialmod/blockstates/radish_crop.json
 7dd30551d813f162772924280c020ca1cc01e1dd assets/tutorialmod/blockstates/stripped_bloodwood_log.json
@@ -71,6 +72,7 @@ e1e61688ca1f2feefaa0b0c185cccfd8a453578c assets/tutorialmod/models/block/bloodwo
 e93da9b475de64e8afb17566f8498c098af3c98a assets/tutorialmod/models/block/goji_berry_bush_stage1.json
 f0cb39d26a55b71b3d81dfb60e0b5e6a97d7242e assets/tutorialmod/models/block/goji_berry_bush_stage2.json
 78e06d5c1c0a01fe0d6e5583c7829a6f1d9efd5b assets/tutorialmod/models/block/goji_berry_bush_stage3.json
+cbb3bc31e1f24886a4fb63da2c924e96efc143b3 assets/tutorialmod/models/block/growth_chamber.json
 ed27aaa00c275028e1495bb6d6bfdcea1851067b assets/tutorialmod/models/block/magic_block.json
 31185a07fc2dc6f1371a066ffe41a03981a51692 assets/tutorialmod/models/block/radish_crop_stage0.json
 130f25109def058713c7d74bf283b7c097ae5425 assets/tutorialmod/models/block/radish_crop_stage1.json
@@ -95,6 +97,7 @@ dd4a645bc99c347acebb56246c637bf91b6cd81c assets/tutorialmod/models/item/bismuth_
 1f8bb7b86c2503131f02292893d331e0bfef90ee assets/tutorialmod/models/item/bloodwood_log.json
 591101ebb706f0ed4333349e8bd6b2eecd2f262e assets/tutorialmod/models/item/bloodwood_planks.json
 c8086309b2a1464b733893baee32144133e69d14 assets/tutorialmod/models/item/bloodwood_wood.json
+f68e1da70ddf5ed5d9ff551c1ed71028ce7c0907 assets/tutorialmod/models/item/growth_chamber.json
 db3c7fd404543728f8b989bee0ca68018dac6e79 assets/tutorialmod/models/item/magic_block.json
 e66c51a1dca784aeeac346150bf7dc79a5bebb3e assets/tutorialmod/models/item/stripped_bloodwood_log.json
 115e11183e95bd020de0fb4e315934647f972e07 assets/tutorialmod/models/item/stripped_bloodwood_wood.json
