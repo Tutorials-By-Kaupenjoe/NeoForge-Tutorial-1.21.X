@@ -3,14 +3,17 @@ package net.kaupenjoe.tutorialmod.compat;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
+import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.recipe.GrowthChamberRecipe;
 import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.screen.custom.GrowthChamberScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 
@@ -41,6 +44,12 @@ public class JEITutorialModPlugin implements IModPlugin {
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
         registration.addRecipeClickArea(GrowthChamberScreen.class, 74, 30, 22, 20,
+                GrowthChamberRecipeCategory.GROWTH_CHAMBER_RECIPE_RECIPE_TYPE);
+    }
+
+    @Override
+    public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.GROWTH_CHAMBER.get().asItem()),
                 GrowthChamberRecipeCategory.GROWTH_CHAMBER_RECIPE_RECIPE_TYPE);
     }
 }
