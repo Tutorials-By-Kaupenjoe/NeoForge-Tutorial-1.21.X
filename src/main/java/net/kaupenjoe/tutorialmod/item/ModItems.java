@@ -80,7 +80,7 @@ public class ModItems {
             (properties) -> new BlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), properties.food(ModFoodProperties.GOJI_BERRY)));
 
     public static final DeferredItem<Item> GECKO_SPAWN_EGG = ITEMS.registerItem("gecko_spawn_egg",
-            (properties) -> new SpawnEggItem(ModEntities.GECKO.get(), 0x31afaf, 0xffac00, properties));
+            (properties) -> new SpawnEggItem(ModEntities.GECKO.get(), properties));
 
     public static final DeferredItem<Item> TOMAHAWK = ITEMS.registerItem("tomahawk",
             (properties) -> new TomahawkItem(properties.stacksTo(16)));

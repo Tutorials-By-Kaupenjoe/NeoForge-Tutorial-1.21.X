@@ -1,6 +1,0 @@
-{
-    "parent": "tutorialmod:item/kaupen_bow",
-    "textures": {
-        "layer0": "tutorialmod:item/kaupen_bow_pulling_0"
-    }
-}

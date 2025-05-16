@@ -1,6 +1,5 @@
 {
   "parent": "minecraft:block/leaves",
-  "render_type": "minecraft:cutout",
   "textures": {
     "all": "tutorialmod:block/bloodwood_leaves"
   }

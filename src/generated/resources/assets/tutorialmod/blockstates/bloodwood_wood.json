@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tutorialmod:block/bloodwood_wood_horizontal",
+      "model": "tutorialmod:block/bloodwood_wood",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "tutorialmod:block/bloodwood_wood"
     },
     "axis=z": {
-      "model": "tutorialmod:block/bloodwood_wood_horizontal",
+      "model": "tutorialmod:block/bloodwood_wood",
       "x": 90
     }
   }

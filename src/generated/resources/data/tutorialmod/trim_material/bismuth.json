@@ -4,6 +4,5 @@
     "color": "#031CFC",
     "translate": "trim_material.tutorialmod.bismuth"
   },
-  "ingredient": "tutorialmod:bismuth",
-  "item_model_index": 0.5
+  "ingredient": "tutorialmod:bismuth"
 }

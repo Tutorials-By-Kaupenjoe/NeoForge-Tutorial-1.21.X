@@ -70,8 +70,10 @@ public class ModArmorItem extends ArmorItem {
         Equippable equippableComponentBreastplate = player.getInventory().getArmor(2).getComponents().get(DataComponents.EQUIPPABLE);
         Equippable equippableComponentHelmet = player.getInventory().getArmor(3).getComponents().get(DataComponents.EQUIPPABLE);
 
-        return equippableComponentBoots.model().equals(mapArmorMaterial.modelId()) && equippableComponentLeggings.model().equals(mapArmorMaterial.modelId()) &&
-                equippableComponentBreastplate.model().equals(mapArmorMaterial.modelId()) && equippableComponentHelmet.model().equals(mapArmorMaterial.modelId());
+        return equippableComponentBoots.assetId().get().equals(mapArmorMaterial.assetId()) &&
+                equippableComponentLeggings.assetId().get().equals(mapArmorMaterial.assetId()) &&
+                equippableComponentBreastplate.assetId().get().equals(mapArmorMaterial.assetId()) &&
+                equippableComponentHelmet.assetId().get().equals(mapArmorMaterial.assetId());
     }
 
     private boolean hasFullSuitOfArmorOn(Player player) {

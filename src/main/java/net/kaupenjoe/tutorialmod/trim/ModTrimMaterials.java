@@ -20,12 +20,12 @@ public class ModTrimMaterials {
             ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
-        register(context, BISMUTH, ModItems.BISMUTH.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()), 0.5F);
+        register(context, BISMUTH, ModItems.BISMUTH.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()));
     }
 
     private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item,
-                                 Style style, float itemModelIndex) {
-        TrimMaterial trimmaterial = TrimMaterial.create(trimKey.location().getPath(), item, itemModelIndex,
+                                 Style style) {
+        TrimMaterial trimmaterial = TrimMaterial.create(trimKey.location().getPath(), item,
                 Component.translatable(Util.makeDescriptionId("trim_material", trimKey.location())).withStyle(style), Map.of());
         context.register(trimKey, trimmaterial);
     }

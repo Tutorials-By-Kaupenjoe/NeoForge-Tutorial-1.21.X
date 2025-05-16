@@ -20,7 +20,7 @@ public class GojiBerryBushBlock extends SweetBerryBushBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean b) {
         return new ItemStack(ModItems.GOJI_BERRIES.get());
     }
 

@@ -1,7 +1,6 @@
 {
-  "parent": "minecraft:block/cross",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/crop",
   "textures": {
-    "cross": "tutorialmod:block/goji_berry_bush_stage0"
+    "crop": "tutorialmod:block/goji_berry_bush_stage0"
   }
 }

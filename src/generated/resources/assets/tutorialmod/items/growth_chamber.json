@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "tutorialmod:block/growth_chamber"
+  }
+}

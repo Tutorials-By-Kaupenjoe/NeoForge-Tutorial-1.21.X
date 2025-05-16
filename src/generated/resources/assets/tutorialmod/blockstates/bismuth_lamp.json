@@ -1,7 +1,7 @@
 {
   "variants": {
     "clicked=false": {
-      "model": "tutorialmod:block/bismuth_lamp_off"
+      "model": "tutorialmod:block/bismuth_lamp"
     },
     "clicked=true": {
       "model": "tutorialmod:block/bismuth_lamp_on"
