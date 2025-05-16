@@ -7,12 +7,14 @@ import net.kaupenjoe.tutorialmod.item.custom.*;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TutorialMod.MOD_ID);
@@ -28,9 +30,9 @@ public class ModItems {
     public static final DeferredItem<Item> RADISH = ITEMS.registerItem("radish",
             (properties) -> new Item(properties.food(ModFoodProperties.RADISH, ModFoodProperties.RADISH_EFFECT)) {
                 @Override
-                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-                    tooltipComponents.add(Component.translatable("tooltip.tutorialmod.radish.tooltip"));
-                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, TooltipDisplay tooltipDisplay, Consumer<Component> components, TooltipFlag tooltipFlag) {
+                    components.accept(Component.translatable("tooltip.tutorialmod.radish.tooltip"));
+                    super.appendHoverText(pStack, pContext, tooltipDisplay, components, tooltipFlag);
                 }
             });
 
@@ -39,10 +41,10 @@ public class ModItems {
     public static final DeferredItem<Item> STARLIGHT_ASHES = ITEMS.registerItem("starlight_ashes",
             Item::new);
 
-    public static final DeferredItem<SwordItem> BISMUTH_SWORD = ITEMS.registerItem("bismuth_sword",
-            (properties) -> new SwordItem(ModToolTiers.BISMUTH, 5, -2.4f, properties));
-    public static final DeferredItem<PickaxeItem> BISMUTH_PICKAXE = ITEMS.registerItem("bismuth_pickaxe",
-            (properties) -> new PickaxeItem(ModToolTiers.BISMUTH, 1.0F, -2.8f, properties));
+    public static final DeferredItem<Item> BISMUTH_SWORD = ITEMS.registerItem("bismuth_sword",
+            (properties) -> new Item(properties.sword(ModToolTiers.BISMUTH, 5, -2.4f)));
+    public static final DeferredItem<Item> BISMUTH_PICKAXE = ITEMS.registerItem("bismuth_pickaxe",
+            (properties) -> new Item(properties.pickaxe(ModToolTiers.BISMUTH, 1.0F, -2.8f)));
     public static final DeferredItem<ShovelItem> BISMUTH_SHOVEL = ITEMS.registerItem("bismuth_shovel",
             (properties) -> new ShovelItem(ModToolTiers.BISMUTH, 1.5F, -3.0f, properties));
     public static final DeferredItem<AxeItem> BISMUTH_AXE = ITEMS.registerItem("bismuth_axe",
@@ -51,19 +53,19 @@ public class ModItems {
             (properties) -> new HoeItem(ModToolTiers.BISMUTH, 0F, -3.0f, properties));
 
     public static final DeferredItem<HammerItem> BISMUTH_HAMMER = ITEMS.registerItem("bismuth_hammer",
-            (properties) -> new HammerItem(ModToolTiers.BISMUTH, 7F, -3.5f, properties));
+            (properties) -> new HammerItem(properties.pickaxe(ModToolTiers.BISMUTH, 7F, -3.5f)));
 
-    public static final DeferredItem<ArmorItem> BISMUTH_HELMET = ITEMS.registerItem("bismuth_helmet",
-            (properties) -> new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.HELMET, properties));
-    public static final DeferredItem<ArmorItem> BISMUTH_CHESTPLATE = ITEMS.registerItem("bismuth_chestplate",
-            (properties) -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.CHESTPLATE, properties));
-    public static final DeferredItem<ArmorItem> BISMUTH_LEGGINGS = ITEMS.registerItem("bismuth_leggings",
-            (properties) -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.LEGGINGS, properties));
-    public static final DeferredItem<ArmorItem> BISMUTH_BOOTS = ITEMS.registerItem("bismuth_boots",
-            (properties) -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.BOOTS, properties));
+    public static final DeferredItem<Item> BISMUTH_HELMET = ITEMS.registerItem("bismuth_helmet",
+            (properties) -> new ModArmorItem(properties.humanoidArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final DeferredItem<Item> BISMUTH_CHESTPLATE = ITEMS.registerItem("bismuth_chestplate",
+            (properties) -> new Item(properties.humanoidArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final DeferredItem<Item> BISMUTH_LEGGINGS = ITEMS.registerItem("bismuth_leggings",
+            (properties) -> new Item(properties.humanoidArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final DeferredItem<Item> BISMUTH_BOOTS = ITEMS.registerItem("bismuth_boots",
+            (properties) -> new Item(properties.humanoidArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
     public static final DeferredItem<Item> BISMUTH_HORSE_ARMOR = ITEMS.registerItem("bismuth_horse_armor",
-            (properties) -> new AnimalArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN, properties.stacksTo(1)));
+            (properties) -> new Item( properties.stacksTo(1).horseArmor(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL)));
 
     public static final DeferredItem<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.registerItem("kaupen_armor_trim_smithing_template",
             SmithingTemplateItem::createArmorTrimTemplate);

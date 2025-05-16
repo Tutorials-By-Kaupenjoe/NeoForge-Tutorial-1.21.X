@@ -22,6 +22,7 @@ import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.core.Holder;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
@@ -48,10 +49,10 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.BISMUTH_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.BISMUTH_HAMMER.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_HELMET.get(), ModArmorMaterials.BISMUTH, "bismuth", false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_CHESTPLATE.get(), ModArmorMaterials.BISMUTH, "bismuth", false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_LEGGINGS.get(), ModArmorMaterials.BISMUTH, "bismuth", false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_BOOTS.get(), ModArmorMaterials.BISMUTH, "bismuth", false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_HELMET.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"), false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_CHESTPLATE.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"), false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_LEGGINGS.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"), false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_BOOTS.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"),  false);
 
         itemModels.generateFlatItem(ModItems.KAUPEN_SMITHING_TEMPLATE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.BISMUTH_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
@@ -106,10 +107,10 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.GROWTH_CHAMBER.get());
 
         blockModels.blockStateOutput.accept(
-                MultiVariantGenerator.multiVariant(ModBlocks.BISMUTH_LAMP.get())
+                MultiVariantGenerator.dispatch(ModBlocks.BISMUTH_LAMP.get())
                         .with(BlockModelGenerators.createBooleanModelDispatch(BismuthLampBlock.CLICKED,
-                                blockModels.createSuffixedVariant(ModBlocks.BISMUTH_LAMP.get(), "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube),
-                                TexturedModel.CUBE.create(ModBlocks.BISMUTH_LAMP.get(), blockModels.modelOutput))));
+                                BlockModelGenerators.plainVariant(blockModels.createSuffixedVariant(ModBlocks.BISMUTH_LAMP.get(), "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube)),
+                                BlockModelGenerators.plainVariant(TexturedModel.CUBE.create(ModBlocks.BISMUTH_LAMP.get(), blockModels.modelOutput)))));
     }
 
     @Override

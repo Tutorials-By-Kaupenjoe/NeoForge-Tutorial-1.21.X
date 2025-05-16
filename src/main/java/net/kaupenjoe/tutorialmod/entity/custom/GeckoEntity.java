@@ -125,7 +125,7 @@ public class GeckoEntity extends Animal {
     @Override
     public void readAdditionalSaveData(CompoundTag compound) {
         super.readAdditionalSaveData(compound);
-        this.entityData.set(VARIANT, compound.getInt("Variant"));
+        this.entityData.set(VARIANT, compound.getInt("Variant").get());
     }
 
     @Override

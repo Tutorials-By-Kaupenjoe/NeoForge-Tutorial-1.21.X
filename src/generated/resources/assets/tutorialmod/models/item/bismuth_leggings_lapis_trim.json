@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "tutorialmod:item/bismuth_leggings",
-    "layer1": "minecraft:trims/items/bismuth_trim_lapis"
+    "layer1": "tutorialmod:bismuth_lapis"
   }
 }

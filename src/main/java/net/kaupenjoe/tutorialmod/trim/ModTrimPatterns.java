@@ -21,7 +21,7 @@ public class ModTrimPatterns {
     }
 
     private static void register(BootstrapContext<TrimPattern> context, DeferredItem<Item> item, ResourceKey<TrimPattern> key) {
-        TrimPattern trimPattern = new TrimPattern(key.location(), item.getDelegate(),
+        TrimPattern trimPattern = new TrimPattern(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "kaupen"),
                 Component.translatable(Util.makeDescriptionId("trim_pattern", key.location())), false);
         context.register(key, trimPattern);
     }

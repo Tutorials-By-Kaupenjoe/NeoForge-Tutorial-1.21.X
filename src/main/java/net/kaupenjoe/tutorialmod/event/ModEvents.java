@@ -11,11 +11,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.animal.sheep.Sheep;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
@@ -99,7 +98,7 @@ public class ModEvents {
                     new ItemStack(ModItems.RADISH_SEEDS.get(), 1), 2, 8, 0.05f));
         }
 
-        if(event.getType() == ModVillagers.KAUPENGER.value()) {
+        if(event.getType() == ModVillagers.KAUPENGER.getKey()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((entity, randomSource) -> new MerchantOffer(

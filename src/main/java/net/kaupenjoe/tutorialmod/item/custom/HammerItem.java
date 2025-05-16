@@ -3,9 +3,7 @@ package net.kaupenjoe.tutorialmod.item.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.DiggerItem;
-import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -13,9 +11,9 @@ import net.minecraft.world.phys.HitResult;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HammerItem extends DiggerItem {
-    public HammerItem(ToolMaterial tier, float attackDamage, float attackSpeed, Properties properties) {
-        super(tier, BlockTags.MINEABLE_WITH_PICKAXE, attackDamage, attackSpeed, properties);
+public class HammerItem extends Item {
+    public HammerItem(Properties properties) {
+        super(properties);
     }
 
     public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayer player) {

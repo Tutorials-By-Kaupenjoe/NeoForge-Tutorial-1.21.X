@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.neoforged.bus.api.IEventBus;
@@ -21,7 +22,7 @@ public class ModVillagers {
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.CHAIR.get().getStateDefinition().getPossibleStates()), 1, 1));
 
     public static final Holder<VillagerProfession> KAUPENGER = VILLAGER_PROFESSIONS.register("kaupenger",
-            () -> new VillagerProfession("kaupenger", holder -> holder.value() == KAUPEN_POI.value(),
+            () -> new VillagerProfession(Component.literal("kaupenger"), holder -> holder.value() == KAUPEN_POI.value(),
                     poiTypeHolder -> poiTypeHolder.value() == KAUPEN_POI.value(), ImmutableSet.of(), ImmutableSet.of(),
                     ModSounds.MAGIC_BLOCK_HIT.get()));
 

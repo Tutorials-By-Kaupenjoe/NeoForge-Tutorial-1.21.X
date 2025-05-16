@@ -3,35 +3,36 @@ package net.kaupenjoe.tutorialmod.item.custom;
 import com.google.common.collect.ImmutableMap;
 import net.kaupenjoe.tutorialmod.item.ModArmorMaterials;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.Equippable;
-import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
 
-public class ModArmorItem extends ArmorItem {
+public class ModArmorItem extends Item {
     private static final Map<ArmorMaterial, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<MobEffectInstance>>())
                     .put(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.JUMP, 200, 1, false, false),
+                            List.of(new MobEffectInstance(MobEffects.JUMP_BOOST, 200, 1, false, false),
                             new MobEffectInstance(MobEffects.GLOWING, 200, 1, false, false)))
                     .build();
 
-    public ModArmorItem(ArmorMaterial material, ArmorType type, Properties properties) {
-        super(material, type, properties);
+    public ModArmorItem(Properties properties) {
+        super(properties);
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if(entity instanceof Player player && !level.isClientSide() && hasFullSuitOfArmorOn(player)) {
+    public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
+        if(entity instanceof Player player && hasFullSuitOfArmorOn(player)) {
             evaluateArmorEffects(player);
         }
     }
@@ -59,16 +60,10 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private boolean hasPlayerCorrectArmorOn(ArmorMaterial mapArmorMaterial, Player player) {
-        for(ItemStack armorStack : player.getArmorSlots()) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
-                return false;
-            }
-        }
-
-        Equippable equippableComponentBoots = player.getInventory().getArmor(0).getComponents().get(DataComponents.EQUIPPABLE);
-        Equippable equippableComponentLeggings = player.getInventory().getArmor(1).getComponents().get(DataComponents.EQUIPPABLE);
-        Equippable equippableComponentBreastplate = player.getInventory().getArmor(2).getComponents().get(DataComponents.EQUIPPABLE);
-        Equippable equippableComponentHelmet = player.getInventory().getArmor(3).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentBoots = player.getInventory().getItem(EquipmentSlot.FEET.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentLeggings = player.getInventory().getItem(EquipmentSlot.LEGS.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentBreastplate = player.getInventory().getItem(EquipmentSlot.CHEST.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentHelmet = player.getInventory().getItem(EquipmentSlot.HEAD.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
 
         return equippableComponentBoots.assetId().get().equals(mapArmorMaterial.assetId()) &&
                 equippableComponentLeggings.assetId().get().equals(mapArmorMaterial.assetId()) &&
@@ -77,10 +72,10 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private boolean hasFullSuitOfArmorOn(Player player) {
-        ItemStack boots = player.getInventory().getArmor(0);
-        ItemStack leggings = player.getInventory().getArmor(1);
-        ItemStack chestplate = player.getInventory().getArmor(2);
-        ItemStack helmet = player.getInventory().getArmor(3);
+        ItemStack boots = player.getInventory().getItem(EquipmentSlot.FEET.getIndex());
+        ItemStack leggings = player.getInventory().getItem(EquipmentSlot.LEGS.getIndex());
+        ItemStack chestplate = player.getInventory().getItem(EquipmentSlot.CHEST.getIndex());
+        ItemStack helmet = player.getInventory().getItem(EquipmentSlot.HEAD.getIndex());
 
         return !boots.isEmpty() && !leggings.isEmpty() && !chestplate.isEmpty() && !helmet.isEmpty();
     }
