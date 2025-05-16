@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.Map;
 
-public class GeckoRenderer extends MobRenderer<GeckoEntity, GeckoModel<GeckoEntity>> {
+public class GeckoRenderer extends MobRenderer<GeckoEntity, GeckoRenderState, GeckoModel> {
     private static final Map<GeckoVariant, ResourceLocation> LOCATION_BY_VARIANT =
             Util.make(Maps.newEnumMap(GeckoVariant.class), map -> {
                 map.put(GeckoVariant.BLUE,
@@ -27,22 +27,34 @@ public class GeckoRenderer extends MobRenderer<GeckoEntity, GeckoModel<GeckoEnti
             });
 
     public GeckoRenderer(EntityRendererProvider.Context context) {
-        super(context, new GeckoModel<>(context.bakeLayer(GeckoModel.LAYER_LOCATION)), 0.25f);
+        super(context, new GeckoModel(context.bakeLayer(GeckoModel.LAYER_LOCATION)), 0.25f);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(GeckoEntity entity) {
-        return LOCATION_BY_VARIANT.get(entity.getVariant());
+    public ResourceLocation getTextureLocation(GeckoRenderState entity) {
+        return LOCATION_BY_VARIANT.get(entity.variant);
     }
 
     @Override
-    public void render(GeckoEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        if(entity.isBaby()) {
+    public void render(GeckoRenderState renderState, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight) {
+        if(renderState.isBaby) {
             poseStack.scale(0.45f, 0.45f, 0.45f);
         } else {
             poseStack.scale(1f, 1f, 1f);
         }
 
-        super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+        super.render(renderState, poseStack, bufferSource, packedLight);
+    }
+
+    @Override
+    public GeckoRenderState createRenderState() {
+        return new GeckoRenderState();
+    }
+
+    @Override
+    public void extractRenderState(GeckoEntity entity, GeckoRenderState reusedState, float partialTick) {
+        super.extractRenderState(entity, reusedState, partialTick);
+        reusedState.idleAnimationState.copyFrom(entity.idleAnimationState);
+        reusedState.variant = entity.getVariant();
     }
 }

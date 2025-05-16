@@ -61,6 +61,7 @@ public class GeckoEntity extends Animal {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 10d)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
+                .add(Attributes.TEMPT_RANGE, 16d)
                 .add(Attributes.FOLLOW_RANGE, 24D);
     }
 
@@ -73,7 +74,7 @@ public class GeckoEntity extends Animal {
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob otherParent) {
         GeckoVariant variant = Util.getRandom(GeckoVariant.values(), this.random);
-        GeckoEntity baby = ModEntities.GECKO.get().create(level);
+        GeckoEntity baby = ModEntities.GECKO.get().create(level, EntitySpawnReason.BREEDING);
         baby.setVariant(variant);
         return baby;
     }
@@ -129,7 +130,7 @@ public class GeckoEntity extends Animal {
 
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
-                                        MobSpawnType spawnType, @Nullable SpawnGroupData spawnGroupData) {
+                                        EntitySpawnReason spawnType, @Nullable SpawnGroupData spawnGroupData) {
         GeckoVariant variant = Util.getRandom(GeckoVariant.values(), this.random);
         this.setVariant(variant);
         return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);

@@ -31,6 +31,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.STICK)
                 .add(Items.COMPASS);
 
+        tag(ModTags.Items.BISMUTH_REPAIRABLE)
+                .add(ModItems.BISMUTH.get());
+
         tag(ItemTags.SWORDS)
                 .add(ModItems.BISMUTH_SWORD.get());
         tag(ItemTags.PICKAXES)

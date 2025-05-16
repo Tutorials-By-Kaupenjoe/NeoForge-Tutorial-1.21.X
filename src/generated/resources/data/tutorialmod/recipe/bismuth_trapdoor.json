@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "bismuth",
   "key": {
-    "#": {
-      "item": "tutorialmod:bismuth"
-    }
+    "#": "tutorialmod:bismuth"
   },
   "pattern": [
     "###",

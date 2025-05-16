@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod.effect;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,7 +14,7 @@ public class SlimeyEffect extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
+    public boolean applyEffectTick(ServerLevel level, LivingEntity livingEntity, int amplifier) {
         if(livingEntity.horizontalCollision) {
             Vec3 initialVec = livingEntity.getDeltaMovement();
             Vec3 climbVec = new Vec3(initialVec.x, 0.2D, initialVec.z);
@@ -21,7 +22,7 @@ public class SlimeyEffect extends MobEffect {
             return true;
         }
 
-        return super.applyEffectTick(livingEntity, amplifier);
+        return super.applyEffectTick(level, livingEntity, amplifier);
     }
 
     @Override

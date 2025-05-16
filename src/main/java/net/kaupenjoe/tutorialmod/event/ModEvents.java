@@ -67,7 +67,7 @@ public class ModEvents {
     public static void livingDamage(LivingDamageEvent.Pre event) {
         if(event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
             if(player.getMainHandItem().getItem() == Items.END_ROD) {
-                player.sendSystemMessage(Component.literal(player.getName().getString() + " just hit a sheep with an END ROD? YOU SICK FRICK!"));
+                player.displayClientMessage(Component.literal(player.getName().getString() + " just hit a sheep with an END ROD? YOU SICK FRICK!"),false);
                 sheep.addEffect(new MobEffectInstance(MobEffects.POISON, 600, 6));
                 player.getMainHandItem().shrink(1);
             }

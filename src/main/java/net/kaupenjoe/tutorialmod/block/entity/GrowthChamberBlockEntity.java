@@ -5,6 +5,7 @@ import net.kaupenjoe.tutorialmod.recipe.GrowthChamberRecipe;
 import net.kaupenjoe.tutorialmod.recipe.GrowthChamberRecipeInput;
 import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.screen.custom.GrowthChamberMenu;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -12,6 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -159,7 +161,7 @@ public class GrowthChamberBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private Optional<RecipeHolder<GrowthChamberRecipe>> getCurrentRecipe() {
-        return this.level.getRecipeManager()
+        return ((ServerLevel) this.level).recipeAccess()
                 .getRecipeFor(ModRecipes.GROWTH_CHAMBER_TYPE.get(), new GrowthChamberRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 

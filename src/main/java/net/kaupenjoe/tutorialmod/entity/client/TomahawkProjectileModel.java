@@ -9,14 +9,16 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
+import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.resources.ResourceLocation;
 
-public class TomahawkProjectileModel extends EntityModel<TomahawkProjectileEntity> {
+public class TomahawkProjectileModel extends EntityModel<EntityRenderState> {
     public static final ModelLayerLocation LAYER_LOCATION =
             new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "tomahawk"), "main");
     private final ModelPart tomahawk;
 
     public TomahawkProjectileModel(ModelPart root) {
+        super(root);
         this.tomahawk = root.getChild("tomahawk");
     }
 
@@ -40,12 +42,7 @@ public class TomahawkProjectileModel extends EntityModel<TomahawkProjectileEntit
     }
 
     @Override
-    public void setupAnim(TomahawkProjectileEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(EntityRenderState state) {
 
-    }
-
-    @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int color) {
-        tomahawk.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
     }
 }

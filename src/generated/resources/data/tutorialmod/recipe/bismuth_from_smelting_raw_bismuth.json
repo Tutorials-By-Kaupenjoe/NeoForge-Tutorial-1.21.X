@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.25,
   "group": "bismuth",
-  "ingredient": {
-    "item": "tutorialmod:raw_bismuth"
-  },
+  "ingredient": "tutorialmod:raw_bismuth",
   "result": {
     "count": 1,
     "id": "tutorialmod:bismuth"
