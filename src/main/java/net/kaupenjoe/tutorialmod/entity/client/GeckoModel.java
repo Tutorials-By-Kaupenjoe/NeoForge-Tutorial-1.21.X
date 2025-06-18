@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.entity.client;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.custom.GeckoEntity;
+import net.minecraft.client.animation.KeyframeAnimation;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -17,10 +18,16 @@ public class GeckoModel extends EntityModel<GeckoRenderState> {
     private final ModelPart body;
     private final ModelPart head;
 
+    private final KeyframeAnimation walkingAnimation;
+    private final KeyframeAnimation idlingAnimation;
+
     public GeckoModel(ModelPart root) {
         super(root);
         this.body = root.getChild("Body");
         this.head = this.body.getChild("Head");
+
+        this.walkingAnimation = GeckoAnimations.ANIM_GECKO_WALK.bake(root);
+        this.idlingAnimation = GeckoAnimations.ANIM_GECKO_IDLE.bake(root);
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -64,8 +71,8 @@ public class GeckoModel extends EntityModel<GeckoRenderState> {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(state.yRot, state.xRot);
 
-        this.animateWalk(GeckoAnimations.ANIM_GECKO_WALK, state.walkAnimationPos, state.walkAnimationSpeed, 2f, 2.5f);
-        this.animate(state.idleAnimationState, GeckoAnimations.ANIM_GECKO_IDLE, state.ageInTicks, 1f);
+        this.walkingAnimation.applyWalk(state.walkAnimationPos, state.walkAnimationSpeed, 2f, 2.5f);
+        this.idlingAnimation.apply(state.idleAnimationState, state.ageInTicks, 1f);
     }
 
     private void applyHeadRotation(float headYaw, float headPitch) {

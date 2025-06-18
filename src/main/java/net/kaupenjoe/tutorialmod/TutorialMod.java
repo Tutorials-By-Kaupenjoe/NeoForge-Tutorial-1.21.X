@@ -25,6 +25,7 @@ import net.kaupenjoe.tutorialmod.util.ModItemProperties;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -124,12 +125,12 @@ public class TutorialMod {
 
             EntityRenderers.register(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
 
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOJI_BERRY_BUSH.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RADISH_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOODWOOD_SAPLING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOJI_BERRY_BUSH.get(), ChunkSectionLayer.CUTOUT);
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RADISH_CROP.get(), ChunkSectionLayer.CUTOUT);
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOODWOOD_SAPLING.get(), ChunkSectionLayer.CUTOUT);
 
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BISMUTH_DOOR.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BISMUTH_TRAPDOOR.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BISMUTH_DOOR.get(), ChunkSectionLayer.CUTOUT);
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BISMUTH_TRAPDOOR.get(), ChunkSectionLayer.CUTOUT);
         }
 
         @SubscribeEvent

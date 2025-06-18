@@ -69,7 +69,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.itemModelOutput.register(ModItems.CHISEL.get(),
                 new ClientItem(new ConditionalItemModel.Unbaked(new HasComponent(ModDataComponents.COORDINATES.get(), false),
                         unbakedUsedChisel, unbakedChisel),
-                        new ClientItem.Properties(false)));
+                        new ClientItem.Properties(false, false)));
 
         itemModels.generateFlatItem(ModItems.RADIATION_STAFF.get(), ModelTemplates.FLAT_ITEM);
 
