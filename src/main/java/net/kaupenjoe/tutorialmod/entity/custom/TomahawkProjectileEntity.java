@@ -44,7 +44,7 @@ public class TomahawkProjectileEntity extends AbstractArrow {
         Entity entity = result.getEntity();
         entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4);
 
-        if (!this.level().isClientSide) {
+        if (!this.level().isClientSide()) {
             this.level().broadcastEntityEvent(this, (byte)3);
             this.discard();
         }

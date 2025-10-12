@@ -7,8 +7,10 @@ import net.kaupenjoe.tutorialmod.entity.GeckoVariant;
 import net.kaupenjoe.tutorialmod.entity.custom.GeckoEntity;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.resources.ResourceLocation;
 
 import java.util.Map;
@@ -36,14 +38,14 @@ public class GeckoRenderer extends MobRenderer<GeckoEntity, GeckoRenderState, Ge
     }
 
     @Override
-    public void render(GeckoRenderState renderState, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight) {
+    public void submit(GeckoRenderState renderState, PoseStack poseStack, SubmitNodeCollector nodeCollector, CameraRenderState cameraRenderState) {
         if(renderState.isBaby) {
             poseStack.scale(0.45f, 0.45f, 0.45f);
         } else {
             poseStack.scale(1f, 1f, 1f);
         }
 
-        super.render(renderState, poseStack, bufferSource, packedLight);
+        super.submit(renderState, poseStack, nodeCollector, cameraRenderState);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class TomahawkItem extends Item {
         ItemStack itemstack = pPlayer.getItemInHand(pUsedHand);
         pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
                 SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
-        if (!pLevel.isClientSide) {
+        if (!pLevel.isClientSide()) {
             TomahawkProjectileEntity tomahawkProjectile = new TomahawkProjectileEntity(pPlayer, pLevel);
             tomahawkProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
             pLevel.addFreshEntity(tomahawkProjectile);

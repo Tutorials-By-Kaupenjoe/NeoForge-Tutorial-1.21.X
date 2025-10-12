@@ -66,7 +66,7 @@ public class ModBlocks {
     public static final DeferredBlock<PressurePlateBlock> BISMUTH_PRESSURE_PLATE = registerBlock("bismuth_pressure_plate",
             (properties) -> new PressurePlateBlock(BlockSetType.IRON, properties.strength(2f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<ButtonBlock> BISMUTH_BUTTON = registerBlock("bismuth_button",
-            (properties) -> new ButtonBlock(BlockSetType.IRON, 20, properties.strength(2f).requiresCorrectToolForDrops().noCollission()));
+            (properties) -> new ButtonBlock(BlockSetType.IRON, 20, properties.strength(2f).requiresCorrectToolForDrops().noCollision()));
 
     public static final DeferredBlock<FenceBlock> BISMUTH_FENCE = registerBlock("bismuth_fence",
             (properties) -> new FenceBlock(properties.strength(2f).requiresCorrectToolForDrops()));
@@ -146,7 +146,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BLOODWOOD_SAPLING = registerBlock("bloodwood_sapling",
             (properties) -> new ModSaplingBlock(ModTreeGrowers.BLOODWOOD,
-                    properties.mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak()
+                    properties.mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak()
                             .sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY), () -> Blocks.NETHERRACK));
 
 

@@ -6,10 +6,12 @@ import com.mojang.math.Axis;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.custom.TomahawkProjectileEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
+import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
@@ -28,13 +30,13 @@ public class TomahawkProjectileRenderer extends EntityRenderer<TomahawkProjectil
     }
 
     @Override
-    public void render(EntityRenderState state, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        poseStack.pushPose();
-        VertexConsumer vertexconsumer = ItemRenderer.getFoilBuffer(
-                buffer, this.model.renderType(this.getTextureLocation()),false, false);
-        this.model.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
+    public void submit(EntityRenderState renderState, PoseStack poseStack, SubmitNodeCollector nodeCollector, CameraRenderState cameraRenderState) {
+        super.submit(renderState, poseStack, nodeCollector, cameraRenderState);
+        // poseStack.pushPose();
+        // VertexConsumer vertexconsumer = ItemRenderer.getFoilBuffer(
+        //         buffer, this.model.renderType(this.getTextureLocation()),false, false);
+        // this.model.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
         poseStack.popPose();
-        super.render(state, poseStack, buffer, packedLight);
     }
 
     public ResourceLocation getTextureLocation() {
