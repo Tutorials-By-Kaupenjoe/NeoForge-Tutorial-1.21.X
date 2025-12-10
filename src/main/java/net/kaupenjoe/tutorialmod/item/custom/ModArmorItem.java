@@ -60,10 +60,10 @@ public class ModArmorItem extends Item {
     }
 
     private boolean hasPlayerCorrectArmorOn(ArmorMaterial mapArmorMaterial, Player player) {
-        Equippable equippableComponentBoots = player.getInventory().getItem(EquipmentSlot.FEET.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
-        Equippable equippableComponentLeggings = player.getInventory().getItem(EquipmentSlot.LEGS.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
-        Equippable equippableComponentBreastplate = player.getInventory().getItem(EquipmentSlot.CHEST.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
-        Equippable equippableComponentHelmet = player.getInventory().getItem(EquipmentSlot.HEAD.getIndex()).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentBoots = player.getItemBySlot(EquipmentSlot.FEET).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentLeggings = player.getItemBySlot(EquipmentSlot.LEGS).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentBreastplate = player.getItemBySlot(EquipmentSlot.CHEST).getComponents().get(DataComponents.EQUIPPABLE);
+        Equippable equippableComponentHelmet = player.getItemBySlot(EquipmentSlot.HEAD).getComponents().get(DataComponents.EQUIPPABLE);
 
         return equippableComponentBoots.assetId().get().equals(mapArmorMaterial.assetId()) &&
                 equippableComponentLeggings.assetId().get().equals(mapArmorMaterial.assetId()) &&
@@ -72,10 +72,10 @@ public class ModArmorItem extends Item {
     }
 
     private boolean hasFullSuitOfArmorOn(Player player) {
-        ItemStack boots = player.getInventory().getItem(EquipmentSlot.FEET.getIndex());
-        ItemStack leggings = player.getInventory().getItem(EquipmentSlot.LEGS.getIndex());
-        ItemStack chestplate = player.getInventory().getItem(EquipmentSlot.CHEST.getIndex());
-        ItemStack helmet = player.getInventory().getItem(EquipmentSlot.HEAD.getIndex());
+        ItemStack boots = player.getItemBySlot(EquipmentSlot.FEET);
+        ItemStack leggings = player.getItemBySlot(EquipmentSlot.LEGS);
+        ItemStack chestplate = player.getItemBySlot(EquipmentSlot.CHEST);
+        ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
 
         return !boots.isEmpty() && !leggings.isEmpty() && !chestplate.isEmpty() && !helmet.isEmpty();
     }

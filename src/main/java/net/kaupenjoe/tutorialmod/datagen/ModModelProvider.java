@@ -22,7 +22,7 @@ import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.core.Holder;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
@@ -49,10 +49,10 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.BISMUTH_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.BISMUTH_HAMMER.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_HELMET.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"), false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_CHESTPLATE.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"), false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_LEGGINGS.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"), false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_BOOTS.get(), ModArmorMaterials.BISMUTH, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth"),  false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_HELMET.get(), ModArmorMaterials.BISMUTH, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_CHESTPLATE.get(), ModArmorMaterials.BISMUTH, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_LEGGINGS.get(), ModArmorMaterials.BISMUTH, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_BOOTS.get(), ModArmorMaterials.BISMUTH, ItemModelGenerators.TRIM_PREFIX_BOOTS,  false);
 
         itemModels.generateFlatItem(ModItems.KAUPEN_SMITHING_TEMPLATE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.BISMUTH_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
@@ -69,7 +69,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.itemModelOutput.register(ModItems.CHISEL.get(),
                 new ClientItem(new ConditionalItemModel.Unbaked(new HasComponent(ModDataComponents.COORDINATES.get(), false),
                         unbakedUsedChisel, unbakedChisel),
-                        new ClientItem.Properties(false, false)));
+                        new ClientItem.Properties(false, false, 1f)));
 
         itemModels.generateFlatItem(ModItems.RADIATION_STAFF.get(), ModelTemplates.FLAT_ITEM);
 

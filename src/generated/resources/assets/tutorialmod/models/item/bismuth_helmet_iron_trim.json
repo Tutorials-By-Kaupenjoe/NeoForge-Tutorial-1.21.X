@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "tutorialmod:item/bismuth_helmet",
-    "layer1": "tutorialmod:bismuth_iron"
+    "layer1": "minecraft:trims/items/helmet_trim_iron"
   }
 }

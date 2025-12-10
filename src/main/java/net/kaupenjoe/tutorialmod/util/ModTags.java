@@ -1,7 +1,7 @@
 package net.kaupenjoe.tutorialmod.util;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -14,7 +14,7 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_BISMUTH_TOOL = createTag("incorrect_for_bismuth_tool");
 
         private static TagKey<Block> createTag(String name) {
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
+            return BlockTags.create(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
         }
     }
 
@@ -23,7 +23,7 @@ public class ModTags {
         public static final TagKey<Item> BISMUTH_REPAIRABLE = createTag("bismuth_repairable");
 
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
+            return ItemTags.create(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
         }
     }
 }

@@ -3,7 +3,7 @@ package net.kaupenjoe.tutorialmod.effect;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -18,7 +18,7 @@ public class ModEffects {
     public static final Holder<MobEffect> SLIMEY_EFFECT = MOB_EFFECTS.register("slimey",
             () -> new SlimeyEffect(MobEffectCategory.NEUTRAL, 0x36ebab)
                     .addAttributeModifier(Attributes.MOVEMENT_SPEED,
-                            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "slimey"), -0.25f,
+                            Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "slimey"), -0.25f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
 

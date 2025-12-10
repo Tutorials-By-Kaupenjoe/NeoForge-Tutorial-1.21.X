@@ -24,7 +24,6 @@
     "base": 5,
     "per_level_above_first": 7
   },
-  "primary_items": "#minecraft:enchantable/sword",
   "slots": [
     "mainhand"
   ],

@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "tutorialmod:item/bismuth_boots",
-    "layer1": "tutorialmod:bismuth_netherite"
+    "layer1": "minecraft:trims/items/boots_trim_netherite"
   }
 }

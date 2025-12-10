@@ -1,21 +1,18 @@
 package net.kaupenjoe.tutorialmod.screen.custom;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.RenderPipelines;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 
 public class GrowthChamberScreen extends AbstractContainerScreen<GrowthChamberMenu> {
-    private static final ResourceLocation GUI_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,"textures/gui/growth_chamber/growth_chamber_gui.png");
-    private static final ResourceLocation ARROW_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,"textures/gui/arrow_progress.png");
+    private static final Identifier GUI_TEXTURE =
+            Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,"textures/gui/growth_chamber/growth_chamber_gui.png");
+    private static final Identifier ARROW_TEXTURE =
+            Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID,"textures/gui/arrow_progress.png");
 
     public GrowthChamberScreen(GrowthChamberMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);

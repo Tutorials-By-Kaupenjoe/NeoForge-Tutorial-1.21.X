@@ -10,11 +10,11 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class TomahawkProjectileModel extends EntityModel<EntityRenderState> {
     public static final ModelLayerLocation LAYER_LOCATION =
-            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "tomahawk"), "main");
+            new ModelLayerLocation(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "tomahawk"), "main");
     private final ModelPart tomahawk;
 
     public TomahawkProjectileModel(ModelPart root) {

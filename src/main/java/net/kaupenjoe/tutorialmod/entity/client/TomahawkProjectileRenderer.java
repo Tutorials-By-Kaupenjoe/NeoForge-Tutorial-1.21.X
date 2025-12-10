@@ -13,7 +13,7 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 
 public class TomahawkProjectileRenderer extends EntityRenderer<TomahawkProjectileEntity, EntityRenderState> {
@@ -39,7 +39,7 @@ public class TomahawkProjectileRenderer extends EntityRenderer<TomahawkProjectil
         poseStack.popPose();
     }
 
-    public ResourceLocation getTextureLocation() {
-        return ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/tomahawk/tomahawk.png");
+    public Identifier getTextureLocation() {
+        return Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/tomahawk/tomahawk.png");
     }
 }

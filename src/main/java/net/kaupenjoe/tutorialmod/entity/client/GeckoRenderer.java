@@ -5,27 +5,26 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.GeckoVariant;
 import net.kaupenjoe.tutorialmod.entity.custom.GeckoEntity;
-import net.minecraft.Util;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.state.CameraRenderState;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.Util;
 
 import java.util.Map;
 
 public class GeckoRenderer extends MobRenderer<GeckoEntity, GeckoRenderState, GeckoModel> {
-    private static final Map<GeckoVariant, ResourceLocation> LOCATION_BY_VARIANT =
+    private static final Map<GeckoVariant, Identifier> LOCATION_BY_VARIANT =
             Util.make(Maps.newEnumMap(GeckoVariant.class), map -> {
                 map.put(GeckoVariant.BLUE,
-                        ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_blue.png"));
+                        Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_blue.png"));
                 map.put(GeckoVariant.GREEN,
-                        ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_green.png"));
+                        Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_green.png"));
                 map.put(GeckoVariant.PINK,
-                        ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_pink.png"));
+                        Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_pink.png"));
                 map.put(GeckoVariant.BROWN,
-                        ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_brown.png"));
+                        Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "textures/entity/gecko/gecko_brown.png"));
             });
 
     public GeckoRenderer(EntityRendererProvider.Context context) {
@@ -33,7 +32,7 @@ public class GeckoRenderer extends MobRenderer<GeckoEntity, GeckoRenderState, Ge
     }
 
     @Override
-    public ResourceLocation getTextureLocation(GeckoRenderState entity) {
+    public Identifier getTextureLocation(GeckoRenderState entity) {
         return LOCATION_BY_VARIANT.get(entity.variant);
     }
 

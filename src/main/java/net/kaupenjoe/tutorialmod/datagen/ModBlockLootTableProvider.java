@@ -3,7 +3,7 @@ package net.kaupenjoe.tutorialmod.datagen;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.custom.RadishCropBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
-import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -97,7 +97,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createLeavesDrops(block, ModBlocks.BLOODWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.CHAIR.get());
-        this.dropSelf(ModBlocks.PEDESTAL.get());
+        // this.dropSelf(ModBlocks.PEDESTAL.get());
         this.dropSelf(ModBlocks.GROWTH_CHAMBER.get());
     }
 
@@ -111,6 +111,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value).filter(block -> block != ModBlocks.PEDESTAL.get())::iterator;
     }
 }

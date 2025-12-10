@@ -1,4 +1,4 @@
-// 1.21.5	2025-05-16T22:02:29.9902837	Global Loot Modifiers : tutorialmod
+// 1.21.11	2025-12-10T16:12:15.3351742	Global Loot Modifiers : tutorialmod
 df34d6c357677ad493a248d81f0bab28e7c4312b data/neoforge/loot_modifiers/global_loot_modifiers.json
 4b9d2885653a320f8b77e961f00002fef0d3d5af data/tutorialmod/loot_modifiers/berry_from_creeper.json
 c06e4331aba273288afce360b396ac4f5ed6ffe7 data/tutorialmod/loot_modifiers/chisel_from_jungle_temple.json

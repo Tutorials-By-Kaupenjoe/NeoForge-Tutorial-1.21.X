@@ -4,7 +4,7 @@ import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.JukeboxSong;
 import net.neoforged.bus.api.IEventBus;
@@ -33,11 +33,11 @@ public class ModSounds {
     public static final ResourceKey<JukeboxSong> BAR_BRAWL_KEY = createSong("bar_brawl");
 
     private static ResourceKey<JukeboxSong> createSong(String name) {
-        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
+        return ResourceKey.create(Registries.JUKEBOX_SONG, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
     }
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, name);
+        Identifier id = Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
 
